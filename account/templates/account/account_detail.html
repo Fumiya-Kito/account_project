@@ -1,0 +1,35 @@
+{% extends 'account/base.html' %}
+
+<div class="alert alert-primary" role="alert">
+    Shift App
+</div>
+
+
+{% block body %}
+
+<div class="container">
+
+
+
+    <div class="account-box">
+        <h1>Account</h1>
+        <div class="account-element">
+            <p>【名前】<br> {{ object.name }}</p>
+        </div>
+        <div class="account-element">
+            <p>【性別】 <br> {{ object.get_gender_display }}</p>
+        </div>
+        <div class="account-element">
+            <p>【役職】 <br> {{ object.get_duties_display }}</p>
+        </div>
+
+
+    </div>
+    <p><a href="{% url 'logout' %}">ログアウト</a>
+</div>
+
+
+
+</div>
+
+{% endblock body %}

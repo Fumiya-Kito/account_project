@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<HTML>
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f86e995da6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h2 class="logo">Shift App</h2>
+
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <ul class="menu">
+            <a href="{% url 'index' %}">HOME</a>
+            <a href="{% url 'login' %}">LOGIN</a>
+            <a href="{% url 'register_user' %}">SIGN UP</a>
+        </ul>
+        <label for="chk" class="hide-menu-btn">
+            <i class="fas fa-times"></i>
+        </label>
+    </div>
+
+    {% block body %}
+
+    {% endblock body %}
+
+
+</body>
+
+</HTML>
